@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Verification</h2>
+    <div class="container">
+        <div class="upload-box">
+            <p>Your Photo</p>
+            <input type="file" id="image1" accept="image/*">
+            <img id="preview1" src="">
+        </div>
+        <div class="upload-box">
+            <p>Passport or National ID</p>
+            <input type="file" id="image2" accept="image/*">
+            <img id="preview2" src="">
+        </div>
+    </div>
+
+    <button id="verifyButton">Verify Faces</button>
+
+    <div class="cropped-faces" id="croppedContainer">
+        <div>
+            <p>Face 1</p>
+            <img id="face1" src="">
+        </div>
+        <div>
+            <p>Face 2</p>
+            <img id="face2" src="">
+        </div>
+    </div>
+
+    <p id="result" class="result"></p>
+
+    <!-- Load face-api.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.0.1/dist/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
